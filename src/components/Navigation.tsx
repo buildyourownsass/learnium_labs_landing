@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const Navigation = () => {
@@ -19,8 +20,17 @@ const Navigation = () => {
         <div className="flex justify-between items-center py-4 px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-blue-600">
-              Learnium Labs
+            <Link href="/" className="flex items-center space-x-3">
+              <Image
+                src="/logo.svg"
+                alt="Learnium Labs"
+                width={40}
+                height={40}
+                className="h-10 w-10"
+              />
+              <span className="text-2xl font-bold" style={{ color: 'var(--color-primary)' }}>
+                Learnium Labs
+              </span>
             </Link>
           </div>
 
@@ -30,7 +40,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                className="text-gray-700 hover:text-green-800 font-medium transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -47,7 +57,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               type="button"
-              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+              className="text-gray-700 hover:text-green-800 focus:outline-none focus:text-green-800"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -69,7 +79,7 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium"
+                  className="block px-3 py-2 text-gray-700 hover:text-green-800 font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -77,7 +87,7 @@ const Navigation = () => {
               ))}
               <Link
                 href="/contact"
-                className="block px-3 py-2 text-blue-600 font-semibold"
+                className="block px-3 py-2 text-green-800 font-semibold"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get Started

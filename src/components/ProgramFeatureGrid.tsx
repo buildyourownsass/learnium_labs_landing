@@ -22,7 +22,7 @@ export default function ProgramFeatureGrid({
   const gridClass = columns === 3 ? 'grid md:grid-cols-3 gap-8' : 'grid md:grid-cols-2 lg:grid-cols-4 gap-8';
   
   return (
-    <section className="section-padding gradient-bg">
+    <section className="section-padding gradient-bg-2">
       <div className="container-max">
         <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">{title}</h2>
         {subtitle && (

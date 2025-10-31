@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+:root {
+  --color-primary: #1e4a3a;
+  --color-primary-light: #2a5f4c;
+  --color-primary-dark: #15382b;
+  --color-accent: #4ade80;
+  --color-secondary: #065f46;
+}
 
 html {
   scroll-behavior: smooth;
@@ -10,7 +17,7 @@ body {
 }
 
 .btn-primary {
-  background-color: rgb(37 99 235);
+  background-color: var(--color-primary);
   color: white;
   font-weight: 600;
   padding: 0.75rem 1.5rem;
@@ -20,17 +27,17 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: rgb(29 78 216);
+  background-color: var(--color-primary-dark);
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
 .btn-secondary {
   background-color: white;
-  color: rgb(37 99 235);
+  color: var(--color-primary);
   font-weight: 600;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
-  border: 2px solid rgb(37 99 235);
+  border: 2px solid var(--color-primary);
   transition: all 0.2s ease-in-out;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
@@ -38,6 +45,26 @@ body {
 .btn-secondary:hover {
   background-color: rgb(249 250 251);
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.hover\:text-primary:hover {
+  color: var(--color-primary);
+}
+
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+.hover\:bg-primary:hover {
+  background-color: var(--color-primary);
+}
+
+.hover\:border-primary:hover {
+  border-color: var(--color-primary);
 }
 
 .section-padding {
@@ -65,7 +92,40 @@ body {
 }
 
 .gradient-bg {
+  background: linear-gradient(135deg, 
+    rgb(229 247 233), 
+    rgb(220 242 226), 
+    rgb(209 237 217)
+  );
+}
+
+.gradient-bg-2 {
   background: linear-gradient(135deg, rgb(239 246 255), white, rgb(238 242 255));
+}
+
+.gradient-bg-dark {
+  background: linear-gradient(135deg, 
+    rgba(30, 74, 58, 0.01), 
+    rgba(42, 95, 76, 0.08), 
+    rgba(21, 56, 43, 0.12)
+  );
+}
+
+.gradient-bg-green {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+}
+
+.section-alt {
+  background-color: rgb(249 250 251);
+}
+
+.section-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.section-accent {
+  background-color: rgb(240 253 244);
 }
 
 .card-hover {
@@ -75,4 +135,47 @@ body {
 .card-hover:hover {
   transform: scale(1.05);
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* Footer Styles */
+.social-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 48px !important;
+  height: 48px !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 50% !important;
+  color: #d1d5db !important;
+  transition: all 0.3s ease !important;
+  backdrop-filter: blur(10px);
+  text-decoration: none !important;
+}
+
+.social-icon:hover {
+  background-color: var(--color-accent) !important;
+  color: var(--color-primary) !important;
+  transform: translateY(-2px) scale(1.05) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+}
+
+.footer-link {
+  color: #d1d5db !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: var(--color-accent) !important;
+  transform: translateX(4px) !important;
+}
+
+.contact-item {
+  transition: transform 0.3s ease !important;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px) !important;
 }

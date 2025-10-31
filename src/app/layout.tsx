@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   description: "At Learnium Labs, we are redefining skill development by delivering industry-aligned, experiential learning programs that prepare individuals and organizations to thrive in the modern world.",
   keywords: "skill development, learning programs, professional training, education, industry-aligned curriculum",
   authors: [{ name: "Learnium Labs" }],
+  icons: {
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
+  },
   openGraph: {
     title: "Learnium Labs - Empowering Learners, Enabling Industries",
     description: "Industry-aligned, experiential learning programs that bridge the gap between learning and employability.",
