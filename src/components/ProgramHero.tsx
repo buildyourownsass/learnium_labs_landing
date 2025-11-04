@@ -7,6 +7,8 @@ interface ProgramHeroProps {
   description: string;
   primaryButtonText?: string;
   secondaryButtonText?: string;
+  primaryButtonUrl?: string;
+  secondaryButtonUrl?: string;
   imageSrc?: string;
   decorativeElements?: string[];
   // Legacy props for backward compatibility
@@ -35,7 +37,9 @@ export default function ProgramHero({
   decorativeElements,
   buttonText,
   primaryButtonText = "Enroll Now",
-  secondaryButtonText = "Learn More"
+  secondaryButtonText = "Learn More",
+  primaryButtonUrl = "/contact",
+  secondaryButtonUrl = "/contact"
 }: ProgramHeroProps) {
   // Use new or legacy props
   const heroImage = imageSrc || backgroundImage || "/images/hero-main.svg";
@@ -116,11 +120,11 @@ export default function ProgramHero({
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary text-lg px-8 py-4">
+            <Link href={primaryButtonUrl} className="btn-primary text-lg px-8 py-4">
               {mainButton}
             </Link>
             {secondaryButtonText && (
-              <Link href="/contact" className="btn-secondary text-lg px-8 py-4">
+              <Link href={secondaryButtonUrl} className="btn-secondary text-lg px-8 py-4">
                 {secondaryButtonText}
               </Link>
             )}

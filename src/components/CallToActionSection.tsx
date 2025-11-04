@@ -5,6 +5,8 @@ interface CallToActionSectionProps {
   description: string;
   primaryButtonText: string;
   secondaryButtonText: string;
+  primaryButtonUrl?: string;
+  secondaryButtonUrl?: string;
   backgroundColor: string;
   primaryButtonBg?: string;
   secondaryButtonBorder?: string;
@@ -16,6 +18,8 @@ export default function CallToActionSection({
   description,
   primaryButtonText,
   secondaryButtonText,
+  primaryButtonUrl = "/contact",
+  secondaryButtonUrl = "/contact",
   backgroundColor,
   primaryButtonBg = "bg-white",
   secondaryButtonBorder = "border-white",
@@ -65,13 +69,13 @@ export default function CallToActionSection({
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
-            href="/contact" 
+            href={primaryButtonUrl} 
             className={getPrimaryButtonClasses()}
           >
             {primaryButtonText}
           </Link>
           <Link 
-            href="/contact" 
+            href={secondaryButtonUrl} 
             className={`bg-transparent border-2 ${getSecondaryButtonBorder()} ${getSectionTextColor()} hover:bg-primary hover:text-white hover:border-primary font-semibold py-2 px-4 rounded-lg transition-all duration-200 text-lg`}
           >
             {secondaryButtonText}

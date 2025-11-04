@@ -4,6 +4,7 @@ export const igniteProgramData = {
     subtitle: "For School Students (Grades 8-12)",
     description: "The Ignite program introduces school students to the world beyond textbooks. It focuses on nurturing critical thinking, creativity, problem-solving, and digital literacy — the foundational skills essential for success in the 21st century.",
     primaryButtonText: "Enroll Now", 
+    primaryButtonUrl: "https://learnium-labs.trainercentralsite.in/clientapp/app/course/22287000000003011/course-details?previousPage=5",
     secondaryButtonText: "Learn More",
     imageSrc: "/images/ignite-hero.svg",
     decorativeElements: [
@@ -97,6 +98,7 @@ export const igniteProgramData = {
     title: "Ready to Ignite Your Potential?",
     description: "Join the Ignite program and discover the exciting world of innovation, technology, and creative problem-solving.",
     primaryButtonText: "Enroll Now",
+    primaryButtonUrl: "https://learnium-labs.trainercentralsite.in/clientapp/app/course/22287000000003011/course-details?previousPage=5",
     secondaryButtonText: "Learn More",
     backgroundColor: "var(--color-accent)"
   }
