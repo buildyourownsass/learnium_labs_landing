@@ -20,7 +20,7 @@ const Footer = () => {
                 height={48}
                 className="h-12 w-12"
               />
-              <h3 className="text-2xl font-bold" style={{ color: 'var(--color-accent)' }}>
+              <h3 className="text-2xl font-bold" style={{  }}>
                 Learnium Labs
               </h3>
             </div>
